@@ -1,0 +1,313 @@
+ (routes 
+  (resolution mm 100000)
+  (parser
+  )
+  (parser
+  )
+  (structure_out
+   (layer TOP (type signal)
+   )
+   (layer I1 (type signal)
+   )
+   (layer I2 (type signal)
+   )
+   (layer I3 (type signal)
+   )
+   (layer I4 (type signal)
+   )
+   (layer I5 (type signal)
+   )
+   (layer I6 (type signal)
+   )
+   (layer I7 (type signal)
+   )
+   (layer I8 (type signal)
+   )
+   (layer I9 (type signal)
+   )
+   (layer I10 (type signal)
+   )
+   (layer I11 (type signal)
+   )
+   (layer I12 (type signal)
+   )
+   (layer I13 (type signal)
+   )
+   (layer I14 (type signal)
+   )
+   (layer BOT (type signal)
+   )
+  )
+  (library_out
+  (padstack $VIA_POWER
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  (padstack $VIA_SIGNAL
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  )
+  (network_out
+   (Net #00045 
+   (rule
+   )
+   (wire (path BOT 50800  -10477500 6477000 -11176000 6477000 -11176000 5070000
+     -11500000 5070000)
+    (connect (terminal pin ADC1-2) (terminal pin INPUTS-5))
+   )
+   )
+   (Net #00046 
+   (rule
+   )
+   (wire (path BOT 50800  -10477500 6223000 -10795000 6223000 -10795000 4816000
+     -11500000 4816000)
+    (connect (terminal pin ADC1-3) (terminal pin INPUTS-4))
+   )
+   )
+   (Net #00057 
+   (rule
+   )
+   (wire (path BOT 50800  -11500000 4562000 -11049000 4562000 -11049000 4350700
+     -10472420 4350700)
+    (connect (terminal pin INPUTS-3) (terminal pin ADC2-2))
+   )
+   )
+   (Net #00058 
+   (rule
+   )
+   (wire (path BOT 50800  -10472420 4096700 -11176000 4096700 -11176000 4308000
+     -11500000 4308000)
+    (connect (terminal pin ADC2-3) (terminal pin INPUTS-2))
+   )
+   )
+   (Net #00069 
+   (rule
+   )
+   (wire (path BOT 50800  -10477500 2159000 -11303000 2159000 -11303000 4054000
+     -11500000 4054000)
+    (connect (terminal pin ADC3-2) (terminal pin INPUTS-1))
+   )
+   )
+   (Net #00070 
+   (rule
+   )
+   (wire (path BOT 50800  -10477500 1905000 -11500000 1905000 -11500000 3800000)
+    (connect (terminal pin ADC3-3) (terminal pin INPUTS-0))
+   )
+   )
+   (Net 3.3V 
+   (rule
+   )
+   (wire (path BOT 50800  -6985840 1448360 -6985840 6386600 -6614540 6386600)
+    (connect (terminal pin 3V3SUPPLY-0) (terminal pin MICROCONTROLLER-37))
+   )
+   (wire (path BOT 50800  -8138540 2068600 -8138540 1270000 -6985840 1270000
+     -6985840 1448360)
+    (connect (terminal pin MICROCONTROLLER-19) (terminal pin 3V3SUPPLY-0))
+   )
+   )
+   (Net 5V 
+   (rule
+   )
+   (wire (path BOT 50800  -8138540 2576600 -8318500 2576600 -8318500 1143000
+     -5461000 1143000 -5461000 4889500 -5670880 4889500)
+    (connect (terminal pin MICROCONTROLLER-17) (terminal wire))
+   )
+   (wire (path BOT 50800  -5670880 4889500 -5670880 4717160)
+    (connect (terminal wire) (terminal pin BLT1-3))
+   )
+   (wire (path BOT 50800  -11684000 5324000 -11684000 7396480 -7683500 7396480
+     -7683500 2576600 -8138540 2576600)
+    (connect (terminal wire) (terminal pin MICROCONTROLLER-17))
+   )
+   (wire (path BOT 50800  -11684000 5324000 -11684000 1206500 -10287000 1206500
+     -10287000 2413000 -10477500 2413000)
+    (connect (terminal wire) (terminal pin ADC3-1))
+   )
+   (wire (path BOT 50800  -10477500 6731000 -11303000 6731000 -11303000 5324000
+     -11500000 5324000)
+    (connect (terminal pin ADC1-1) (terminal pin INPUTS-6))
+   )
+   (wire (path BOT 50800  -10477500 2413000 -10795000 2413000 -10795000 3283760
+     -10287000 3283760 -10287000 4604700 -10472420 4604700)
+    (connect (terminal pin ADC3-1) (terminal pin ADC2-1))
+   )
+   (wire (path BOT 50800  -5676240 6205500 -5670880 6205500 -5670880 4889500)
+    (connect (terminal pin 5VSUPPLY-0) (terminal wire))
+   )
+   (wire (path BOT 50800  -11500000 5324000 -11684000 5324000)
+    (connect (terminal pin INPUTS-6) (terminal wire))
+   )
+   )
+   (Net COMMAND 
+   (rule
+   )
+   (wire (path BOT 50800  -9207500 1397000 -8763000 1397000 -8763000 5715000)
+    (connect (terminal pin ADC3-6) (terminal wire))
+   )
+   (wire (path BOT 50800  -9202420 3588700 -9525000 3588700 -9525000 1397000
+     -9207500 1397000)
+    (connect (terminal pin ADC2-6) (terminal pin ADC3-6))
+   )
+   (wire (path BOT 50800  -8763000 5715000 -9207500 5715000)
+    (connect (terminal wire) (terminal pin ADC1-6))
+   )
+   (wire (path BOT 50800  -8138540 6132600 -8509000 6132600 -8509000 5715000)
+    (connect (terminal pin MICROCONTROLLER-3) (terminal wire))
+   )
+   (wire (path BOT 50800  -8509000 5715000 -8763000 5715000)
+    (connect (terminal wire) (terminal wire))
+   )
+   )
+   (Net CS 
+   (rule
+   )
+   (wire (path BOT 50800  -9207500 1905000 -9398000 1905000 -9398000 3302000
+     -9017000 3302000 -9017000 4096700 -9202420 4096700)
+    (connect (terminal pin ADC3-8) (terminal pin ADC2-8))
+   )
+   (wire (path BOT 50800  -9202420 4096700 -9525000 4096700 -9525000 7175500
+     -7937500 7175500 -7937500 6640600 -8138540 6640600)
+    (connect (terminal pin ADC2-8) (terminal pin MICROCONTROLLER-1))
+   )
+   (wire (path BOT 50800  -9207500 6223000 -8890000 6223000 -8890000 6640600
+     -8138540 6640600)
+    (connect (terminal pin ADC1-8) (terminal pin MICROCONTROLLER-1))
+   )
+   )
+   (Net GND 
+   (rule
+   )
+   (wire (path BOT 50800  -7556500 2286000 -7366000 2286000 -7366000 6640600
+     -6614540 6640600)
+    (connect (terminal wire) (terminal pin MICROCONTROLLER-38))
+   )
+   (wire (path BOT 50800  -7556500 2286000 -7937500 2286000)
+    (connect (terminal wire) (terminal wire))
+   )
+   (wire (path BOT 50800  -11500000 5578000 -11500000 6985000 -10477500 6985000)
+    (connect (terminal pin INPUTS-7) (terminal pin ADC1-0))
+   )
+   (wire (path BOT 50800  -5651500 6350000 -5334000 6350000)
+    (connect (terminal wire) (terminal wire))
+   )
+   (wire (path BOT 50800  -7493840 1448360 -7493840 2286000 -7556500 2286000)
+    (connect (terminal pin 3V3SUPPLY-1) (terminal wire))
+   )
+   (wire (path BOT 50800  -5651500 6350000 -5651500 6477000 -5676240 6477000
+     -5676240 6713500)
+    (connect (terminal wire) (terminal pin 5VSUPPLY-1))
+   )
+   (wire (path BOT 50800  -5651500 6350000 -5905500 6350000 -5905500 4463160
+     -5670880 4463160)
+    (connect (terminal wire) (terminal pin BLT1-2))
+   )
+   (wire (path BOT 50800  -6614540 6640600 -6159500 6640600 -6159500 6713500
+     -5676240 6713500)
+    (connect (terminal pin MICROCONTROLLER-38) (terminal pin 5VSUPPLY-1))
+   )
+   (wire (path BOT 50800  -10472420 4858700 -10033000 4858700 -10033000 2857500
+     -10477500 2857500 -10477500 2667000)
+    (connect (terminal pin ADC2-0) (terminal pin ADC3-0))
+   )
+   (wire (path BOT 50800  -10472420 4858700 -10472420 5306731 -10287000 5306731
+     -10287000 6985000 -10477500 6985000)
+    (connect (terminal pin ADC2-0) (terminal pin ADC1-0))
+   )
+   (wire (path BOT 50800  -7937500 2286000 -8138540 2286000 -8138540 2322600)
+    (connect (terminal wire) (terminal pin MICROCONTROLLER-18))
+   )
+   (wire (path BOT 50800  -5334000 6350000 -5334000 1016000 -10160000 1016000
+     -10160000 2667000 -10477500 2667000)
+    (connect (terminal wire) (terminal pin ADC3-0))
+   )
+   (wire (path BOT 50800  -6614540 6640600 -6614540 6894600)
+    (connect (terminal pin MICROCONTROLLER-38) (terminal pin MICROCONTROLLER-39))
+   )
+   )
+   (Net RX 
+   (rule
+   )
+   (wire (path BOT 50800  -5670880 4209160 -5969000 4209160 -5969000 3846600
+     -6614540 3846600)
+    (connect (terminal pin BLT1-1) (terminal pin MICROCONTROLLER-27))
+   )
+   )
+   (Net SCLK 
+   (rule
+   )
+   (wire (path BOT 50800  -9202420 4350700 -8890000 4350700 -8890000 2159000
+     -9207500 2159000)
+    (connect (terminal pin ADC2-9) (terminal pin ADC3-9))
+   )
+   (wire (path BOT 50800  -9207500 6477000 -9017000 6477000 -9017000 6894600
+     -8138540 6894600)
+    (connect (terminal pin ADC1-9) (terminal pin MICROCONTROLLER-0))
+   )
+   (wire (path BOT 50800  -9207500 6477000 -9398000 6477000 -9398000 4350700
+     -9202420 4350700)
+    (connect (terminal pin ADC1-9) (terminal pin ADC2-9))
+   )
+   )
+   (Net TX 
+   (rule
+   )
+   (wire (path BOT 50800  -5670880 3955160 -5670880 3592600 -6614540 3592600)
+    (connect (terminal pin BLT1-0) (terminal pin MICROCONTROLLER-26))
+   )
+   )
+   (Net X_OUT 
+   (rule
+   )
+   (wire (path BOT 50800  -8138540 6386600 -8763000 6386600 -8763000 5969000
+     -9207500 5969000)
+    (connect (terminal pin MICROCONTROLLER-2) (terminal pin ADC1-7))
+   )
+   )
+   (Net Y_OUT 
+   (rule
+   )
+   (wire (path BOT 50800  -8138540 5878600 -7810500 5878600 -7810500 7302500
+     -9652000 7302500 -9652000 3842700 -9202420 3842700)
+    (connect (terminal pin MICROCONTROLLER-4) (terminal pin ADC2-7))
+   )
+   )
+   (Net Z_OUT 
+   (rule
+   )
+   (wire (path BOT 50800  -8138540 5624600 -8636000 5624600 -8636000 1905000
+     -8953500 1905000 -8953500 1651000 -9207500 1651000)
+    (connect (terminal pin MICROCONTROLLER-5) (terminal pin ADC3-7))
+   )
+   )
+  )
+ )
