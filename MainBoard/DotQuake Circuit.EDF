@@ -6,9 +6,7 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -120.75160 7.79780 -49.86880 74.98080))
-  (boundary (path signal 0.20320 -120.65000 7.89940 -52.55260 7.89940 -52.55260 74.87920
-   -120.65000 74.87920 -120.65000 7.89940))
+  (boundary (rect pcb -68.68160 -54.71160 76.30160 76.30160))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction off))
   (layer I1 (type signal) (direction off))
@@ -51,16 +49,14 @@
   )
  )
  (placement
-  (component ADS1118V2_ADC1 (place ADC1 -92.07500 57.15000 front 0))
-  (component ADS1118V2_ADC2 (place ADC2 -92.02420 35.88700 front 0))
-  (component "HC-06_BLT1" (place BLT1 -56.70880 39.55160 front 180))
-  (component STM32F103_MICROCONTROLLER (place MICROCONTROLLER -81.38540 68.94600 front 0
+  (component ADS1118V2_ADC1 (place ADC1 3.86960 38.46600 front 0))
+  (component ADS1118V2_ADC2 (place ADC2 3.92040 17.20300 front 0))
+  (component "HC-06_BLT1" (place BLT1 43.04580 19.59760 front 180))
+  (component STM32F103_MICROCONTROLLER (place MICROCONTROLLER 18.36920 48.99200 front 0
   ))
-  (component "BLOCK TERMINAL_5VSUPPLY" (place 5VSUPPLY -56.76240 62.05500 front 90))
-  (component ADS1118V2_ADC3 (place ADC3 -92.07500 13.97000 front 0))
-  (component "BLOCK TERMINAL_3V3SUPPLY" (place 3V3SUPPLY -69.85840 14.48360 front 180
-  ))
-  (component "SIL-100-08_INPUTS" (place INPUTS -115.00000 38.00000 front 90))
+  (component "BLOCK TERMINAL_5VSUPPLY" (place 5VSUPPLY 42.99220 42.10100 front 90))
+  (component ADS1118V2_ADC3 (place ADC3 3.86960 -4.01400 front 0))
+  (component ADXL335_ADXL1 (place ADXL1 -20.32000 17.78000 front 0))
  )
  (library
   (image ADS1118V2_ADC1 (side front)
@@ -163,21 +159,13 @@
    (pin PS0 (rotate 90) 10 0.00000 10.16000)
    (pin PS0 (rotate 90) 11 0.00000 12.70000)
   )
-  (image "BLOCK TERMINAL_3V3SUPPLY" (side front)
-   (outline (rect TOP -2.64160 -2.64160 7.72160 2.64160))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS2 (rotate 0) 1 5.08000 0.00000)
-  )
-  (image "SIL-100-08_INPUTS" (side front)
-   (outline (rect TOP -2.64160 -2.64160 20.42160 3.91160))
-   (pin PS3 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+  (image ADXL335_ADXL1 (side front)
+   (outline (rect TOP -18.47160 -2.57160 2.27160 12.63160))
+   (pin PS3 (rotate 0) 0 0.00000 10.16000)
+   (pin PS3 (rotate 0) 1 0.00000 7.62000)
+   (pin PS3 (rotate 0) 2 0.00000 5.08000)
+   (pin PS3 (rotate 0) 3 0.00000 2.54000)
+   (pin PS3 (rotate 0) 4 0.00000 0.00000)
   )
   (padstack PS0 (absolute on)
    (shape (circle TOP 2.03200 0 0))
@@ -289,61 +277,19 @@
   )
  )
  (network
-  (net "#00045"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC1-2 INPUTS-5)
-  )
-  (net "#00046"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC1-3 INPUTS-4)
-  )
-  (net "#00057"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC2-2 INPUTS-3)
-  )
-  (net "#00058"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC2-3 INPUTS-2)
-  )
-  (net "#00069"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC3-2 INPUTS-1)
-  )
-  (net "#00070"
-   (circuit
-    (use_layer BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins ADC3-3 INPUTS-0)
-  )
   (net "3.3V"
    (circuit
     (use_layer BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins MICROCONTROLLER-19 MICROCONTROLLER-37 3V3SUPPLY-0)
+   (pins ADC1-1 ADC2-1 MICROCONTROLLER-19 MICROCONTROLLER-37 ADC3-1 ADXL1-0)
   )
   (net "5V"
    (circuit
     (use_layer BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins ADC1-1 ADC2-1 BLT1-3 MICROCONTROLLER-17 5VSUPPLY-0 ADC3-1 INPUTS-6)
+   (pins BLT1-3 MICROCONTROLLER-17 5VSUPPLY-0)
   )
   (net "COMMAND"
    (circuit
@@ -364,8 +310,15 @@
     (use_layer BOT)
     (use_via $VIA_POWER)
    )
-    (pins ADC1-0 ADC2-0 BLT1-2 MICROCONTROLLER-18 MICROCONTROLLER-38 MICROCONTROLLER-39
-    5VSUPPLY-1 ADC3-0 3V3SUPPLY-1 INPUTS-7)
+    (pins ADC1-11 ADC2-11 BLT1-2 MICROCONTROLLER-18 MICROCONTROLLER-38 MICROCONTROLLER-39
+    5VSUPPLY-1 ADC3-11 ADXL1-4)
+  )
+  (net "REF"
+   (circuit
+    (use_layer BOT)
+    (use_via $VIA_SIGNAL)
+   )
+   (pins ADC1-3 ADC2-3 ADC3-3)
   )
   (net "RX"
    (circuit
@@ -388,6 +341,13 @@
    )
    (pins BLT1-0 MICROCONTROLLER-26)
   )
+  (net "X_IN"
+   (circuit
+    (use_layer BOT)
+    (use_via $VIA_SIGNAL)
+   )
+   (pins ADC1-2 ADXL1-1)
+  )
   (net "X_OUT"
    (circuit
     (use_layer BOT)
@@ -395,12 +355,26 @@
    )
    (pins ADC1-7 MICROCONTROLLER-2)
   )
+  (net "Y_IN"
+   (circuit
+    (use_layer BOT)
+    (use_via $VIA_SIGNAL)
+   )
+   (pins ADC2-2 ADXL1-2)
+  )
   (net "Y_OUT"
    (circuit
     (use_layer BOT)
     (use_via $VIA_SIGNAL)
    )
    (pins ADC2-7 MICROCONTROLLER-4)
+  )
+  (net "Z_IN"
+   (circuit
+    (use_layer BOT)
+    (use_via $VIA_SIGNAL)
+   )
+   (pins ADC3-2 ADXL1-3)
   )
   (net "Z_OUT"
    (circuit
@@ -424,21 +398,19 @@
    )
   )
   (class SIGNAL
-   "#00045"
-   "#00046"
-   "#00057"
-   "#00058"
-   "#00069"
-   "#00070"
    "3.3V"
    "5V"
    "COMMAND"
    "CS"
+   "REF"
    "RX"
    "SCLK"
    "TX"
+   "X_IN"
    "X_OUT"
+   "Y_IN"
    "Y_OUT"
+   "Z_IN"
    "Z_OUT"
    "{NC}"
    "{VOID}"
